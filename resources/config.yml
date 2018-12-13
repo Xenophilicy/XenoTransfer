@@ -13,10 +13,10 @@
 #                                        $$/                                        $$$$$$/  
 
 #Message displayed when the plugin loads (after the default)
-Enable_Message: "§6Xenophilicy §ahas made the plugin successfully!"
+Enable_Message: "§aXenoTransfer by §6Xenophilicy §ahas been enabled!"
 
 #Message displayed when the plugin loads (after the default)
-Disable_Message: "§6Xenophilicy §ahas made the plugin successfully again!"
+Disable_Message: "§cXenoTransfer by §6Xenophilicy §chas been disabled!"
 
 #-----------------------------------------------------------------------
 #First Server

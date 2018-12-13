@@ -41,11 +41,11 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
         $this->saveResource("config.yml");
-        $this->getLogger()->info("§aXenoTransfer by §6Xenophilicy §ahas been enabled! ".$this->getConfig()->get("Enable_Message"));
+        $this->getLogger()->info($this->getConfig()->get("Enable_Message"));
     }
     //DISABLE
     public function onDisable(){
-        $this->getLogger()->info("§cXenoTransfer by §6Xenophilicy §chas been disabled! ".$this->getConfig()->get("Disable_Message"));
+        $this->getLogger()->info($this->getConfig()->get("Disable_Message"));
     }
     //COMMAND-SENT
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{

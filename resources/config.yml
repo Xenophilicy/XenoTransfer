@@ -18,29 +18,62 @@ Enable_Message: "§aXenoTransfer by §6Xenophilicy §ahas been enabled!"
 #Message displayed when the plugin loads (after the default)
 Disable_Message: "§cXenoTransfer by §6Xenophilicy §chas been disabled!"
 
-#-----------------------------------------------------------------------
-#First Server
-Server_1_Label: "§6Lobby"
+
+#You can leave any of these (except the first server) as false to disable them in the form
+
+#------------------------First Server-------------------------
+
+#Form label goes here
+Server_1_Label: "§6§lLobby Server"
+
+#Server IP goes here
 Server_1_IP: "xenoservers.ddns.net"
+
+#Server port goes here
 Server_1_Port: "19132"
-#-----------------------------------------------------------------------
-#Second Server
-Server_2_Label: "§2Prison"
+
+#------------------------Second Server------------------------
+
+#Form label goes here
+Server_2_Label: "§2§lPrison Server"
+
+#Server IP goes here
 Server_2_IP: "xenoservers.ddns.net"
+
+#Server port goes here
 Server_2_Port: "19133"
-#-----------------------------------------------------------------------
-#Third Server
-Server_3_Label: "§5Creative"
+
+#-------------------------Third Server-------------------------
+
+#Form label goes here
+Server_3_Label: "§5§lCreative Server"
+
+#Server IP goes here
 Server_3_IP: "xenoservers.ddns.net"
+
+#Server port goes here
 Server_3_Port: "19134"
-#-----------------------------------------------------------------------
-#Fourth Server
-Server_4_Label: "§4PvP"
+
+#-------------------------Fourth Server-------------------------
+
+#Form label goes here
+Server_4_Label: "§4§lPvP Server"
+
+#Server IP goes here
 Server_4_IP: "xenoservers.ddns.net"
+
+#Server port goes here
 Server_4_Port: "19135"
-#-----------------------------------------------------------------------
-#Fifth Server
-Server_5_Label: "§3Sky§cBlock"
-Server_5_IP: "xenoservers.ddns.net"
-Server_5_Port: "19136"
-#-----------------------------------------------------------------------
+
+#--------------------------Fifth Server--------------------------
+
+#Form label goes here
+Server_5_Label: false
+
+#Server IP goes here
+Server_5_IP: false
+
+#Server port goes here
+Server_5_Port: false
+
+#-------------------------------------------------------------

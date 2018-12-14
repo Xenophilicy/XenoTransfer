@@ -49,6 +49,7 @@ class Main extends PluginBase implements Listener {
             $this->getConfig()->get("Server_1_Port"),
         );
         foreach ($vars_selection as $input) {
+            
             if($input===null || $input===""){
                 $this->getLogger()->error("§cThere is an error in the config.yml file! Make sure there are no arguments left missing, and be sure to put all arguments inside quotes! Plugin disabling...");
                 $this->getServer()->getPluginManager()->disablePlugin($this);

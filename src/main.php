@@ -31,7 +31,7 @@ use pocketmine\Player;
 use jojoe77777\FormAPI;
 use jojoe77777\FormAPI\SimpleForm;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener {
     //LOAD
     public function onLoad(){
         $this->getLogger()->info("§eXenoTransfer by §6Xenophilicy §eis loading...");
@@ -41,6 +41,25 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
         $this->saveResource("config.yml");
+        $vars_selection = array (
+            $this->getConfig()->get("Enable_Message"),
+            $this->getConfig()->get("Disble_Message"),
+            $this->getConfig()->get("Server_1_Label"),
+            $this->getConfig()->get("Server_1_IP"),
+            $this->getConfig()->get("Server_1_Port"),
+        );
+        foreach ($vars_selection as $input) {
+            if($input===null || $input===""){
+                $this->getLogger()->error("§cThere is an error in the config.yml file! Make sure there are no arguments left missing, and be sure to put all arguments inside quotes! Plugin disabling...");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return true;
+            }
+            if($input==="false"){
+                $this->getLogger()->error("§cThere is an error in the config.yml file! Make sure The false argument is not in quotes! Plugin disabling...");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return true;
+            }
+        }
         $this->getLogger()->info($this->getConfig()->get("Enable_Message"));
     }
     //DISABLE
@@ -49,20 +68,26 @@ class Main extends PluginBase implements Listener{
     }
     //COMMAND-SENT
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-        $player = $sender->getPlayer();
-        switch($command->getName()){
-        case'servers':
-            $this->serverList($sender);
-            break;
-        case'servers-info':
-            $sender->sendMessage("§7-========= §6XenoTransfer §7=========-");
-            $sender->sendMessage("§eAuthor: §aXenophillicy");
-            $sender->sendMessage("§eDescription: §aLets you transfer between your server network with forms!");
-            $sender->sendMessage("§7-===============================-");
-            break;
+        if ($sender instanceof Player) {
+            $player = $sender->getPlayer();
+            switch($command->getName()){
+            case'servers':
+                $this->serverList($sender);
+                break;
+            case'xenotransfer':
+                $sender->sendMessage("§7-=== §6XenoTransfer §7===-");
+                $sender->sendMessage("§eAuthor: §aXenophillicy");
+                $sender->sendMessage("§eDescription: §aTransfer to other servers with ease!");
+                $sender->sendMessage("§7-====================-");
+                break;
+            }
+            return true;
+        }
+        else {
+            $sender->sendMessage("§cThis command only works in game.");
+            return true;
+        }
     }
-    return true;
-}
     //SERVER-LIST-FORM
     public function serverList($player){
         $formapi = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
@@ -93,10 +118,18 @@ class Main extends PluginBase implements Listener{
         $form->setTitle("§6Server List");
         $form->setContent("§aChoose a server to transfer to!");
         $form->addButton($this->getConfig()->get("Server_1_Label"));
-        $form->addButton($this->getConfig()->get("Server_2_Label"));
-        $form->addButton($this->getConfig()->get("Server_3_Label"));
-        $form->addButton($this->getConfig()->get("Server_4_Label"));
-        $form->addButton($this->getConfig()->get("Server_5_Label"));
+        if ($this->getConfig()->get("Server_2_Label") != false){
+            $form->addButton($this->getConfig()->get("Server_2_Label"));
+        }
+        if ($this->getConfig()->get("Server_3_Label") != false){
+            $form->addButton($this->getConfig()->get("Server_3_Label"));
+        }
+        if ($this->getConfig()->get("Server_4_Label") != false){
+            $form->addButton($this->getConfig()->get("Server_4_Label"));
+        }
+        if ($this->getConfig()->get("Server_5_Label") != false){
+            $form->addButton($this->getConfig()->get("Server_5_Label"));
+        }
         $form->sendToPlayer($player);
     }
-}        
+}

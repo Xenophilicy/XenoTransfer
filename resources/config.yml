@@ -12,12 +12,14 @@
 #                                        $$ |                                      $$    $$/ 
 #                                        $$/                                        $$$$$$/  
 
-#Message displayed when the plugin loads (after the default)
+#Message displayed when the plugin loads (inside quotes)
 Enable_Message: "§aXenoTransfer by §6Xenophilicy §ahas been enabled!"
 
-#Message displayed when the plugin loads (after the default)
+#Message displayed when the plugin loads (inside quotes)
 Disable_Message: "§cXenoTransfer by §6Xenophilicy §chas been disabled!"
 
+#Choose whether you want to use the compass item in the player's hotbar (TRUE or FALSE)
+Lobby_Server: TRUE
 
 #You can leave any of these (except the first server) as false to disable them in the form
 

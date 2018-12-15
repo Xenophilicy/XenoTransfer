@@ -1,8 +1,8 @@
 name: XenoTransfer
 author: Xenophilicy
-version: 1.5.0
+version: 2.1.0
 description: Lets you transfer between your server network with forms!
-main: XenoTransfer\main
+main: XenoTransfer\XenoTransfer
 api: 3.0.0
 commands:
  servers:

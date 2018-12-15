@@ -3,7 +3,7 @@ Lets you transfer between your server network on PocketMine with FormAPI!
 
 You can find more info here on the wiki page: https://github.com/Xenophilicy/XenoTransfer/wiki
 ***
-## XenoTransfer Details
+## Plugin Details
 * **API:** 3.0.0
 * **Version:** 2.1.0
 * **Basic Description:** Lets you transfer between your server network with forms!

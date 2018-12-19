@@ -1,19 +1,35 @@
 # XenoTransfer
-Lets you transfer between your server network on PocketMine with FormAPI! 
+Lets you transfer between servers with ease!
 
-You can find more info here on the wiki page: https://github.com/Xenophilicy/XenoTransfer/wiki
+```diff
+Cleaned The Code For A More Satisfying Look!
++ Added A Compass
+- Removed Some Code
++ Added A Enchant (For The Glow)
+- Removed Scheduler
++ Updated Version To 2.4.0
+```
+## Information
+Finally, A plugin that allows players to transfer between servers with simplicity.
+**XenoTransfer** is a plugin that simply uses **FormAPI** to easly and seamlessly display your servers in a ordered list. Its simple, the user just needs to write a simple command, and then from there its pretty straightforward.
+
+## Commands
+```diff
+/servers → See your servers inside a UI!
+/Xenotransfer → Information about XenoTransfer!
+```
 ***
-## Plugin Details
-* **API:** 3.0.0
-* **Version:** 2.1.0
+
+## XenoTansfer Details
+* **API:** 3.5.1
+* **Version:** 2.4.0
 * **Basic Description:** Lets you transfer between your server network with forms!
-* _Easy to edit config file_
-* _Simple code for editing and debugging_
-* Use the command: _/servers_ to get to the form list!
-* Use the command: _/xenotransfer_ to get info about the plugin!
+* *Easy to edit config.yml file*
+* *Simple code for editing and debugging*
 ***
+
 ## Dependencies
-FormAPI ~ https://github.com/jojoe77777/FormAPI
-***
+**FormAPI →  https://github.com/jojoe77777/FormAPI**
+
 ## Credits
-@ItzYaBoiLqcity
+**@oKqzan**

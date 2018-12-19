@@ -1,81 +1,77 @@
-#MADE BY:
+# MADE BY:
 # __    __                                          __        __  __  __                     
 #/  |  /  |                                        /  |      /  |/  |/  |                    
 #$$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
 #$$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
 # $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
 #  $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
-#$$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |#
+# $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |
 #$$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
 #$$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
 #                                        $$ |                                      /  \__$$ |
 #                                        $$ |                                      $$    $$/ 
-#                                        $$/                                        $$$$$$/  
+#                                        $$/                                        $$$$$$/           
+# Editied By:
+#
+#           /$$   /$$                                        
+#          | $$  /$$/                                        
+#  /$$$$$$ | $$ /$$/   /$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$ 
+# /$$__  $$| $$$$$/   /$$__  $$|____ /$$/ |____  $$| $$__  $$
+#| $$  \ $$| $$  $$  | $$  \ $$   /$$$$/   /$$$$$$$| $$  \ $$
+#| $$  | $$| $$\  $$ | $$  | $$  /$$__/   /$$__  $$| $$  | $$
+#|  $$$$$$/| $$ \  $$|  $$$$$$$ /$$$$$$$$|  $$$$$$$| $$  | $$
+# \______/ |__/  \__/ \____  $$|________/ \_______/|__/  |__/
+#                          | $$                              
+#                          | $$                              
+#                          |__/  
 
-#Message displayed when the plugin loads (inside quotes)
-Enable_Message: "§aXenoTransfer by §6Xenophilicy §ahas been enabled!"
 
-#Message displayed when the plugin loads (inside quotes)
-Disable_Message: "§cXenoTransfer by §6Xenophilicy §chas been disabled!"
 
-#Choose whether you want to use the compass item in the player's hotbar (TRUE or FALSE)
-Lobby_Server: TRUE
+Compass-Name: "Server Selector"
 
-#You can leave any of these (except the first server) as false to disable them in the form
+#-------------------------- First Server ---------------------------
 
-#------------------------First Server-------------------------
-
-#Form label goes here
+# Server Name → Custom text to be displayed on the button!
 Server_1_Label: "§6§lLobby Server"
 
-#Server IP goes here
+# Server IP → Write down your server's IP address!
 Server_1_IP: "xenoservers.ddns.net"
 
-#Server port goes here
+# Server Port → Write down your server's Port!
 Server_1_Port: "19132"
 
-#------------------------Second Server------------------------
+# Same steps apply to the other servers! (Set any server, but the first one, to false to disable them inside the UI)
 
-#Form label goes here
+#--------------------------- Second Server -------------------------
+
 Server_2_Label: "§2§lPrison Server"
 
-#Server IP goes here
 Server_2_IP: "xenoservers.ddns.net"
 
-#Server port goes here
 Server_2_Port: "19133"
 
-#-------------------------Third Server-------------------------
+#-------------------------- Third Server ---------------------------
 
-#Form label goes here
 Server_3_Label: "§5§lCreative Server"
-
-#Server IP goes here
+ 
 Server_3_IP: "xenoservers.ddns.net"
-
-#Server port goes here
+ 
 Server_3_Port: "19134"
 
-#-------------------------Fourth Server-------------------------
-
-#Form label goes here
+#-------------------------- Fourth Server --------------------------
+ 
 Server_4_Label: "§4§lPvP Server"
-
-#Server IP goes here
+ 
 Server_4_IP: "xenoservers.ddns.net"
 
-#Server port goes here
 Server_4_Port: "19135"
 
-#--------------------------Fifth Server--------------------------
+#-------------------------- Fifth Server --------------------------
 
-#Form label goes here
 Server_5_Label: false
 
-#Server IP goes here
 Server_5_IP: false
 
-#Server port goes here
 Server_5_Port: false
 
-#-------------------------------------------------------------
+#-----------------------------------------------------------------

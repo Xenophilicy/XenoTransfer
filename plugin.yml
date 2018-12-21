@@ -1,11 +1,9 @@
 name: XenoTransfer
 author: Xenophilicy & oKqzan_
-version: 2.4.0
+version: 2.6.0
 main: XenoTransfer\Main
 api: [3.0.0, 3.5.1, 4.0.0]
-
 Description: Lets you transfer between your server network with forms!
-
 commands:
  servers:
   description: See your servers!
@@ -13,5 +11,5 @@ commands:
   default: true
  xenotransfer:
   description: About the plugin XenoTransfer!
-  permission: xenotransfer.use.serversabt
+  permission: xenotransfer.use.about
   default: true

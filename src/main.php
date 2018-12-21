@@ -33,13 +33,14 @@ use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
-use pocketmine\item\Item;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\Server;
 use pocketmine\Player;
+use pocketmine\utils\Config;
+use pocketmine\item\Item;
 
 //FormAPI → https://github.com/jojoe77777/FormAPI
 use jojoe77777\FormAPI;
@@ -47,19 +48,22 @@ use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener {
 
+    private $config;
+
     public function onLoad(){
+        $this->saveDefaultConfig();
+        $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
+        $this->config->getAll();
         $this->getLogger()->info("§eXenoTransfer by §6Xenophilicy §eis loading...");
     }
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        @mkdir($this->getDataFolder());
-        $this->saveResource("config.yml");
-		$this->getConfig()->getAll();
+        $this->getLogger()->info("§6XenoTransfer§a has been enabled!");
     }
     
     public function onDisable(){
-        $this->getLogger()->info($this->getConfig()->get("Disable_Message"));
+        $this->getLogger()->info($this->config->get("§6XenoTransfer§c has been disabled!"));
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
@@ -90,46 +94,51 @@ class Main extends PluginBase implements Listener {
             if($data === null){
                 return;
             }
-                switch($data){
-                    case 0:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_1_IP").' '.$this->getConfig()->get("Server_1_Port"));
-                        break;
-                    case 1:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_2_IP").' '.$this->getConfig()->get("Server_2_Port"));
-                        break;
-                    case 2:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_3_IP").' '.$this->getConfig()->get("Server_3_Port"));
-                        break;
-                    case 3:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_4_IP").' '.$this->getConfig()->get("Server_4_Port"));
-                        break;
-                    case 4:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_5_IP").' '.$this->getConfig()->get("Server_5_Port"));
-                        break;
-                }
+            switch($data){
+                case 0:
+                    $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_1.IP").' '.$this->config->getNested("Server_1.Port"));
+                    break;
+                case 1:
+                    $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_2.IP").' '.$this->config->getNested("Server_2.Port"));
+                    break;
+                case 2:
+                    $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_3.IP").' '.$this->config->getNested("Server_3.Port"));
+                    break;
+                case 3:
+                    $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_4.IP").' '.$this->config->getNested("Server_4.Port"));
+                    break;
+                case 4:
+                    $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_5.IP").' '.$this->config->getNested("Server_5.Port"));
+                    break;
+            }
             return true;
         });
         $form->setTitle("§6Server List");
         $form->setContent("§aChoose a server to transfer to!");
-        $form->addButton($this->getConfig()->get("Server_1_Label"));
-        if ($this->getConfig()->get("Server_2_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_2_Label"));
+        $label1 = $this->config->getNested("Server_1.Label");
+        $label2 = $this->config->getNested("Server_2.Label");
+        $label3 = $this->config->getNested("Server_3.Label");
+        $label4 = $this->config->getNested("Server_4.Label");
+        $label5 = $this->config->getNested("Server_5.Label");
+        $form->addButton("$label1");
+        if ($label2 != false){
+            $form->addButton("$label2");
         }
-        if ($this->getConfig()->get("Server_3_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_3_Label"));
+        if ($label3 != false){
+            $form->addButton("$label3");
         }
-        if ($this->getConfig()->get("Server_4_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_4_Label"));
+        if ($label4 != false){
+            $form->addButton("$label4");
         }
-        if ($this->getConfig()->get("Server_5_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_5_Label"));
+        if ($label5 != false){
+            $form->addButton("$label5");
         }
         $form->sendToPlayer($player);
     }
 
     public function onJoin(PlayerJoinEvent $event){
         $player = $event->getPlayer();
-        $compassText = $this->getConfig()->get("Compass-Name");
+        $compassText = $this->config->get("Compass-Name");
 		$enchantment = Enchantment::getEnchantment(0);
 		$enchInstance = new EnchantmentInstance($enchantment, 1);
 		$item = Item::get(345);
@@ -140,49 +149,54 @@ class Main extends PluginBase implements Listener {
     
     public function onInteract(PlayerInteractEvent $event){
         $player = $event->getPlayer();
-        $compassText = $this->getConfig()->get("Compass-Name");
-        $disableCompHotbar = $this->getConfig()->get("Disable-Compass-Hotbar");
+        $compassText = $this->config->get("Compass-Name");
+        $disableCompHotbar = $this->config->get("Disable-Compass-Hotbar");
         $item = $player->getInventory()->getItemInHand();
-			if($item->getCustomName() == "§l§a$compassText"){
-                $event->setCancelled($disableCompHotbar);
-                $formapi = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = new SimpleForm(function (Player $player, $data){
-            if($data === null){
-                return;
-            }
+        if($item->getCustomName() == "§l§a$compassText"){
+            $event->setCancelled($disableCompHotbar);
+            $formapi = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+            $form = new SimpleForm(function (Player $player, $data){
+                if($data === null){
+                    return;
+                }
                 switch($data){
                     case 0:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_1_IP").' '.$this->getConfig()->get("Server_1_Port"));
+                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_1.IP").' '.$this->config->getNested("Server_1.Port"));
                         break;
                     case 1:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_2_IP").' '.$this->getConfig()->get("Server_2_Port"));
+                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_2.IP").' '.$this->config->getNested("Server_2.Port"));
                         break;
                     case 2:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_3_IP").' '.$this->getConfig()->get("Server_3_Port"));
+                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_3.IP").' '.$this->config->getNested("Server_3.Port"));
                         break;
                     case 3:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_4_IP").' '.$this->getConfig()->get("Server_4_Port"));
+                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_4.IP").' '.$this->config->getNested("Server_4.Port"));
                         break;
                     case 4:
-                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->getConfig()->get("Server_5_IP").' '.$this->getConfig()->get("Server_5_Port"));
+                        $this->getServer()->getCommandMap()->dispatch($player, 'transferserver '.$this->config->getNested("Server_5.IP").' '.$this->config->getNested("Server_5.Port"));
                         break;
                 }
-            return true;
+                return true;
         });
         $form->setTitle("§6Server List");
         $form->setContent("§aChoose a server to transfer to!");
-        $form->addButton($this->getConfig()->get("Server_1_Label"));
-        if ($this->getConfig()->get("Server_2_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_2_Label"));
+        $label1 = $this->config->getNested("Server_1.Label");
+        $label2 = $this->config->getNested("Server_2.Label");
+        $label3 = $this->config->getNested("Server_3.Label");
+        $label4 = $this->config->getNested("Server_4.Label");
+        $label5 = $this->config->getNested("Server_5.Label");
+        $form->addButton("$label1");
+        if ($label2 != false){
+            $form->addButton("$label2");
         }
-        if ($this->getConfig()->get("Server_3_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_3_Label"));
+        if ($label3 != false){
+            $form->addButton("$label3");
         }
-        if ($this->getConfig()->get("Server_4_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_4_Label"));
+        if ($label4 != false){
+            $form->addButton("$label4");
         }
-        if ($this->getConfig()->get("Server_5_Label") != false){
-            $form->addButton($this->getConfig()->get("Server_5_Label"));
+        if ($label5 != false){
+            $form->addButton("$label5");
         }
         $form->sendToPlayer($player);
         }

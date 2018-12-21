@@ -1,77 +1,59 @@
 # MADE BY:
-# __    __                                          __        __  __  __                     
-#/  |  /  |                                        /  |      /  |/  |/  |                    
-#$$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
-#$$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
-# $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
-#  $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
-# $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |
-#$$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
-#$$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
-#                                        $$ |                                      /  \__$$ |
-#                                        $$ |                                      $$    $$/ 
-#                                        $$/                                        $$$$$$/           
+#  __    __                                          __        __  __  __                     
+# /  |  /  |                                        /  |      /  |/  |/  |                    
+# $$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
+# $$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
+#  $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
+#   $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
+#  $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |
+# $$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
+# $$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
+#                                         $$ |                                      /  \__$$ |
+#                                         $$ |                                      $$    $$/ 
+#                                         $$/                                        $$$$$$/       
 # Editied By:
 #
-#           /$$   /$$                                        
-#          | $$  /$$/                                        
-#  /$$$$$$ | $$ /$$/   /$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$ 
-# /$$__  $$| $$$$$/   /$$__  $$|____ /$$/ |____  $$| $$__  $$
-#| $$  \ $$| $$  $$  | $$  \ $$   /$$$$/   /$$$$$$$| $$  \ $$
-#| $$  | $$| $$\  $$ | $$  | $$  /$$__/   /$$__  $$| $$  | $$
-#|  $$$$$$/| $$ \  $$|  $$$$$$$ /$$$$$$$$|  $$$$$$$| $$  | $$
-# \______/ |__/  \__/ \____  $$|________/ \_______/|__/  |__/
-#                          | $$                              
-#                          | $$                              
-#                          |__/  
+#            /$$   /$$                                        
+#           | $$  /$$/                                        
+#   /$$$$$$ | $$ /$$/   /$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$ 
+#  /$$__  $$| $$$$$/   /$$__  $$|____ /$$/ |____  $$| $$__  $$
+# | $$  \ $$| $$  $$  | $$  \ $$   /$$$$/   /$$$$$$$| $$  \ $$
+# | $$  | $$| $$\  $$ | $$  | $$  /$$__/   /$$__  $$| $$  | $$
+# |  $$$$$$/| $$ \  $$|  $$$$$$$ /$$$$$$$$|  $$$$$$$| $$  | $$
+#  \______/ |__/  \__/ \____  $$|________/ \_______/|__/  |__/
+#                           | $$                              
+#                           | $$                              
+#                           |__/  
 
 
-
+# Compass Name → Text that will show on the compass in the player's inventory!
 Compass-Name: "Server Selector"
 
-#-------------------------- First Server ---------------------------
+# You can set any server (but the first one) to false to disable them inside the UI!
+# You can also use '§' on the labels to colorize your servers inside the UI!
 
-# Server Name → Custom text to be displayed on the button!
-Server_1_Label: "§6§lLobby Server"
 
-# Server IP → Write down your server's IP address!
-Server_1_IP: "xenoservers.ddns.net"
+Server_1:
+  Label: "§6§lLobby Server" 
+  IP: "xenoservers.ddns.net" 
+  Port: "19132" 
 
-# Server Port → Write down your server's Port!
-Server_1_Port: "19132"
+Server_2:
+  Label: "§6§lPrison Server" 
+  IP: "xenoservers.ddns.net"
+  Port: "19133" 
 
-# Same steps apply to the other servers! (Set any server, but the first one, to false to disable them inside the UI)
+Server_3:
+  Label: "§6§lCreative Server" 
+  IP: "xenoservers.ddns.net"
+  Port: "19134" 
 
-#--------------------------- Second Server -------------------------
+Server_4:
+  Label: "§6§lPvP Server" 
+  IP: "xenoservers.ddns.net"
+  Port: "19135" 
 
-Server_2_Label: "§2§lPrison Server"
-
-Server_2_IP: "xenoservers.ddns.net"
-
-Server_2_Port: "19133"
-
-#-------------------------- Third Server ---------------------------
-
-Server_3_Label: "§5§lCreative Server"
- 
-Server_3_IP: "xenoservers.ddns.net"
- 
-Server_3_Port: "19134"
-
-#-------------------------- Fourth Server --------------------------
- 
-Server_4_Label: "§4§lPvP Server"
- 
-Server_4_IP: "xenoservers.ddns.net"
-
-Server_4_Port: "19135"
-
-#-------------------------- Fifth Server --------------------------
-
-Server_5_Label: false
-
-Server_5_IP: false
-
-Server_5_Port: false
-
-#-----------------------------------------------------------------
+Server_5:
+  Label: false
+  IP: false
+  Port: false

@@ -2,12 +2,10 @@
 Lets you transfer between servers with ease!
 
 ```diff
-Cleaned The Code For A More Satisfying Look!
-+ Added A Compass
-- Removed Some Code
-+ Added A Enchant (For The Glow)
-- Removed Scheduler
-+ Updated Version To 2.4.0
++ Changed config file
++ Fixed 'Internal Error' on console command
++ Updated Version To 2.6.0
+- Removed unnecessary code
 ```
 ## Information
 Finally, A plugin that allows players to transfer between servers with simplicity.
@@ -16,13 +14,13 @@ Finally, A plugin that allows players to transfer between servers with simplicit
 ## Commands
 ```diff
 /servers → See your servers inside a UI!
-/Xenotransfer → Information about XenoTransfer!
+/xenotransfer → Information about XenoTransfer!
 ```
 ***
 
 ## XenoTansfer Details
 * **API:** 3.5.1
-* **Version:** 2.4.0
+* **Version:** 2.6.0
 * **Basic Description:** Lets you transfer between your server network with forms!
 * *Easy to edit config.yml file*
 * *Simple code for editing and debugging*

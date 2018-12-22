@@ -11,7 +11,7 @@
 #                                         $$ |                                      /  \__$$ |
 #                                         $$ |                                      $$    $$/ 
 #                                         $$/                                        $$$$$$/       
-# Editied By:
+# EDITED BY:
 #
 #            /$$   /$$                                        
 #           | $$  /$$/                                        
@@ -26,34 +26,42 @@
 #                           |__/  
 
 
+# Select whether the compass should be enabled
+Compass-Hotbar: true
+
 # Compass Name → Text that will show on the compass in the player's inventory!
-Compass-Name: "Server Selector"
+Compass-Name: "§l§aServer Selector"
+
+# This is the title of the server UI
+UI-Title: "§9Server List"
+
+# This is the message the will show under your title on the server UI
+UI-Message: "§aChoose a server to transfer to!"
 
 # You can set any server (but the first one) to false to disable them inside the UI!
 # You can also use '§' on the labels to colorize your servers inside the UI!
 
-
-Server_1:
+Server-1:
   Label: "§6§lLobby Server" 
   IP: "xenoservers.ddns.net" 
   Port: "19132" 
 
-Server_2:
-  Label: "§6§lPrison Server" 
+Server-2:
+  Label: "§2§lPrison Server" 
   IP: "xenoservers.ddns.net"
   Port: "19133" 
 
-Server_3:
-  Label: "§6§lCreative Server" 
+Server-3:
+  Label: "§5§lCreative Server" 
   IP: "xenoservers.ddns.net"
   Port: "19134" 
 
-Server_4:
-  Label: "§6§lPvP Server" 
+Server-4:
+  Label: "§4§lPvP Server" 
   IP: "xenoservers.ddns.net"
   Port: "19135" 
 
-Server_5:
+Server-5:
   Label: false
   IP: false
   Port: false

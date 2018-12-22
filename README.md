@@ -3,9 +3,9 @@ Lets you transfer between servers with ease!
 
 ```diff
 + Changed config file
-+ Fixed 'Internal Error' on console command
-+ Updated Version To 2.6.0
-- Removed unnecessary code
++ Updated Version To 2.7.0
++ Fixed compass issue
++ Added versatility
 ```
 ## Information
 Finally, A plugin that allows players to transfer between servers with simplicity.
@@ -20,7 +20,7 @@ Finally, A plugin that allows players to transfer between servers with simplicit
 
 ## XenoTansfer Details
 * **API:** 3.5.1
-* **Version:** 2.6.0
+* **Version:** 2.7.0
 * **Basic Description:** Lets you transfer between your server network with forms!
 * *Easy to edit config.yml file*
 * *Simple code for editing and debugging*

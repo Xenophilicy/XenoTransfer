@@ -2,10 +2,10 @@
 Lets you transfer between servers with ease!
 
 ```diff
-+ Changed config file
 + Updated Version To 2.7.0
 + Fixed compass issue
-+ Added versatility
++ Added versatility to config file
+- Removed useless scheduler
 ```
 ## Information
 Finally, A plugin that allows players to transfer between servers with simplicity.

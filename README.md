@@ -31,3 +31,4 @@ Finally, A plugin that allows players to transfer between servers with simplicit
 
 ## Credits
 * [「oKqzan」](https://github.com/oKqzan/)
+* [Xenophilicy](https://github.com/Xenophilicy/)

@@ -30,4 +30,4 @@ Finally, A plugin that allows players to transfer between servers with simplicit
 **FormAPI →  https://github.com/jojoe77777/FormAPI**
 
 ## Credits
-**@oKqzan**
+* [「oKqzan」](https://github.com/oKqzan/)

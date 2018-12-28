@@ -32,6 +32,8 @@ Finally, A plugin that allows players to transfer between servers with simplicit
 ## Dependencies
 **FormAPI →  https://github.com/jojoe77777/FormAPI**
 
+**DevTools → https://github.com/pmmp/PocketMine-DevTools** *(If you are using the plugin folder method)*
+
 ## Credits
 * [「oKqzan」](https://github.com/oKqzan/)
 * [Xenophilicy](https://github.com/Xenophilicy/)

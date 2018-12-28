@@ -26,11 +26,14 @@
 #                           |__/  
 
 
-# Select whether the compass should be enabled
-Compass-Hotbar: true
+# Choose whether the compass should be enabled
+Selector-Support: true
+
+# Choose what item the server selector should be
+Selector-Item: 345
 
 # Compass Name → Text that will show on the compass in the player's inventory!
-Compass-Name: "§l§aServer Selector"
+Selector-Name: "§l§aServer Selector"
 
 # This is the title of the server UI
 UI-Title: "§9Server List"

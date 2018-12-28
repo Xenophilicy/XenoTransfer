@@ -1,6 +1,6 @@
 name: XenoTransfer
-author: Xenophilicy & oKqzan_
-version: 2.7.0
+author: Xenophilicy & oKqzan
+version: 2.7.3
 main: XenoTransfer\main
 api: [3.0.0, 3.5.1, 4.0.0]
 Description: Lets you transfer between your server network with forms!

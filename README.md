@@ -1,4 +1,7 @@
 # XenoTransfer
+[![HitCount](http://hits.dwyl.io/Xenophilicy/XenoTransfer.svg)](http://hits.dwyl.io/Xenophilicy/XenoTransfer)
+![](https://img.shields.io/discord/490677165289897995.svg?style=flat-square)
+
 # [![Xenophilicy](https://i.imgur.com/4Hcu5Ms.png)]()
 
 ```diff

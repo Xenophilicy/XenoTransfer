@@ -26,13 +26,13 @@
 #                           |__/  
 
 
-# Choose whether the compass should be enabled
+# Choose whether the selector item should be enabled
 Selector-Support: true
 
 # Choose what item the server selector should be
 Selector-Item: 345
 
-# Compass Name → Text that will show on the compass in the player's inventory!
+# Selector Name → Text that will show on the selector in the player's inventory!
 Selector-Name: "§l§aServer Selector"
 
 # This is the title of the server UI
@@ -41,7 +41,7 @@ UI-Title: "§9Server List"
 # This is the message the will show under your title on the server UI
 UI-Message: "§aChoose a server to transfer to!"
 
-# You can set any server (but the first one) to false to disable them inside the UI!
+# You can set any server to false to disable them inside the UI! (Make sure to leave at least one)
 # You can also use '§' on the labels to colorize your servers inside the UI!
 
 Server-1:

@@ -1,4 +1,7 @@
-# XenoTransfer
+# XenoTransfer (Outdated)
+
+## **Project has been moved to a new repository → https://github.com/Xenophilicy/NaviCompass
+
 [![HitCount](http://hits.dwyl.io/Xenophilicy/XenoTransfer.svg)](http://hits.dwyl.io/Xenophilicy/XenoTransfer)
 ![](https://img.shields.io/discord/490677165289897995.svg?style=flat-square)
 
